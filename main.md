@@ -11,9 +11,9 @@
 
     ```java
     package com.cc.airline.ticketing;
-    
+
     import com.cc.airline.passengers.Passenger;
-    
+
     public class Ticket {
     	private Passenger passenger;
     	private Seat seat;
@@ -21,58 +21,72 @@
     	private long ticketNo;
     	private static long count = 0;
     	private static final long BASE_TICKET_NO = 1000000; // Define a constant for the magic number
-    
+
     	public Passenger getPassenger() {
     		return passenger;
     	}
-    
+
     	public void setPassenger(Passenger passenger) {
     		this.passenger = passenger;
     	}
-    
+
     	public double getPrice() {
     		return price;
     	}
-    
+
     	public Ticket(Passenger passenger, Seat seat, double price) {
     		this.passenger = passenger;
     		this.price = price;
     		this.seat = seat;
     		this.ticketNo = ++count + BASE_TICKET_NO; // Use the constant here
     	}
-    
+
     	public void setPrice(double price) {
     		this.price = price;
     	}
-    
+
     	public Seat getSeat() {
     		return seat;
     	}
-    
+
     	public void setSeat(Seat seat) {
     		this.seat = seat;
     	}
-    
+
     	public long getTicketNo() {
     		return ticketNo;
     	}
-    
+
     	public void setTicketNo(long ticketNo) {
     		this.ticketNo = ticketNo;
     	}
-    
+
     	public String toString() {
     		return ticketNo + " for seat " + seat.getRow() + seat.getLetter() +  " at $" + price;
     	}
     }
     ```
 
-2. What is the most common type of violation still reported by
-    Checkstyle?
+2. What is the most common type of violation still reported by Checkstyle?
 
-    1. There are  \_ occurrences of
+    - **FinalParameters**: 41
+    - **LineLength**: 18
+    - **RegexpSingleline**: 13
+    - **FileTabCharacter**: 12
+    - **ParenPad**: 12
+    - **checkstyle] linter**: 11
+    - **WhitespaceAround**: 4
+    - **VisibilityModifier**: 4
+    - **MethodParamPad**: 3
+    - **MultipleVariableDeclarations**: 2
+    - **NewlineAtEndOfFile**: 2
+    - **NeedBraces**: 2
+    - **RedundantModifier**: 1
+    - **MagicNumber**: 1
 
-    2. Can you figure out how to disable checking for this violation? What module (Checkstyle category) \_ and specific check \_must you ignore?
+    1. There are  `41` occurrences of `FinalParameters`
+
+    2. Can you figure out how to disable checking for this violation? What module (Checkstyle category) \_ and specific check \_must you ignore? Disable <module name="FinalParameters"/> in `sun_checks.xml`
 
 3. How did you change the code to remove the violation in step 13? Copy the improved line(s) of code here:
 
