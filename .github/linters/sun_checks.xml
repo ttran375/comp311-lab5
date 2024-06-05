@@ -199,6 +199,11 @@
       <property name="optional" value="true"/>
     </module>
 
+    <module name="CyclomaticComplexity">
+    <!-- Specify the maximum complexity -->
+      <property name="max" value="10"/> <!-- Adjust the value as needed -->
+    </module>
+
   </module>
 
 </module>
