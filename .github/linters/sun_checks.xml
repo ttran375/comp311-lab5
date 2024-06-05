@@ -32,6 +32,9 @@
 -->
 
 <module name="Checker">
+  <module name="TreeWalker">
+    <module name="CyclomaticComplexity"/>
+  </module>
   <!--
       If you set the basedir property below, then all reported file
       names will be relative to the specified directory. See
