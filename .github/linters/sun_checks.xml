@@ -32,9 +32,7 @@
 -->
 
 <module name="Checker">
-  <module name="TreeWalker">
-    <module name="CyclomaticComplexity"/>
-  </module>
+
   <!--
       If you set the basedir property below, then all reported file
       names will be relative to the specified directory. See
@@ -99,6 +97,7 @@
   <!-- </module> -->
 
   <module name="TreeWalker">
+    <module name="CyclomaticComplexity"/>
 
     <!-- Checks for Javadoc comments.                     -->
     <!-- See https://checkstyle.org/checks/javadoc/index.html -->
@@ -197,11 +196,6 @@
       <property name="file" value="${org.checkstyle.sun.suppressionxpathfilter.config}"
                 default="checkstyle-xpath-suppressions.xml" />
       <property name="optional" value="true"/>
-    </module>
-
-    <module name="CyclomaticComplexity">
-    <!-- Specify the maximum complexity -->
-      <property name="max" value="10"/> <!-- Adjust the value as needed -->
     </module>
 
   </module>
