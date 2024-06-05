@@ -4,12 +4,11 @@ import com.cc.airline.passengers.Passenger;
 
 public class Ticket {
 	private Passenger passenger;
-
 	private Seat seat;
-
 	private double price;
-
 	private long ticketNo;
+	private static long count = 0;
+	private static final long BASE_TICKET_NO = 1000000; // Define a constant for the magic number
 
 	public Passenger getPassenger() {
 		return passenger;
@@ -23,13 +22,11 @@ public class Ticket {
 		return price;
 	}
 
-	private static long count = 0;
-
 	public Ticket(Passenger passenger, Seat seat, double price) {
 		this.passenger = passenger;
 		this.price = price;
 		this.seat = seat;
-		this.ticketNo = ++count + 1000000;
+		this.ticketNo = ++count + BASE_TICKET_NO; // Use the constant here
 	}
 
 	public void setPrice(double price) {
