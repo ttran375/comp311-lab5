@@ -35,11 +35,13 @@ public class UserPrompter {
 	public boolean getYesNoAnswer() {
 		for (int i = 0; i < 3; i++) {
 			String answer = getAnswer();
-			if (answer == null)
+			if (answer == null) {
 				return false;
+			}
 			char ans = answer.toUpperCase().charAt(0);
-			if (ans == 'Y')
+			if (ans == 'Y') {
 				return true;
+			}
 			setPrompt(getPrompt() + ". Please answer Y or N: ");
 		}
 		return false;

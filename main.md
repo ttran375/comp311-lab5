@@ -15,55 +15,55 @@
     import com.cc.airline.passengers.Passenger;
 
     public class Ticket {
-    	private Passenger passenger;
-    	private Seat seat;
-    	private double price;
-    	private long ticketNo;
-    	private static long count = 0;
-    	private static final long BASE_TICKET_NO = 1000000; // Define a constant for the magic number
+     private Passenger passenger;
+     private Seat seat;
+     private double price;
+     private long ticketNo;
+     private static long count = 0;
+     private static final long BASE_TICKET_NO = 1000000; // Define a constant for the magic number
 
-    	public Passenger getPassenger() {
-    		return passenger;
-    	}
+     public Passenger getPassenger() {
+      return passenger;
+     }
 
-    	public void setPassenger(Passenger passenger) {
-    		this.passenger = passenger;
-    	}
+     public void setPassenger(Passenger passenger) {
+      this.passenger = passenger;
+     }
 
-    	public double getPrice() {
-    		return price;
-    	}
+     public double getPrice() {
+      return price;
+     }
 
-    	public Ticket(Passenger passenger, Seat seat, double price) {
-    		this.passenger = passenger;
-    		this.price = price;
-    		this.seat = seat;
-    		this.ticketNo = ++count + BASE_TICKET_NO; // Use the constant here
-    	}
+     public Ticket(Passenger passenger, Seat seat, double price) {
+      this.passenger = passenger;
+      this.price = price;
+      this.seat = seat;
+      this.ticketNo = ++count + BASE_TICKET_NO; // Use the constant here
+     }
 
-    	public void setPrice(double price) {
-    		this.price = price;
-    	}
+     public void setPrice(double price) {
+      this.price = price;
+     }
 
-    	public Seat getSeat() {
-    		return seat;
-    	}
+     public Seat getSeat() {
+      return seat;
+     }
 
-    	public void setSeat(Seat seat) {
-    		this.seat = seat;
-    	}
+     public void setSeat(Seat seat) {
+      this.seat = seat;
+     }
 
-    	public long getTicketNo() {
-    		return ticketNo;
-    	}
+     public long getTicketNo() {
+      return ticketNo;
+     }
 
-    	public void setTicketNo(long ticketNo) {
-    		this.ticketNo = ticketNo;
-    	}
+     public void setTicketNo(long ticketNo) {
+      this.ticketNo = ticketNo;
+     }
 
-    	public String toString() {
-    		return ticketNo + " for seat " + seat.getRow() + seat.getLetter() +  " at $" + price;
-    	}
+     public String toString() {
+      return ticketNo + " for seat " + seat.getRow() + seat.getLetter() +  " at $" + price;
+     }
     }
     ```
 
@@ -89,6 +89,23 @@
     2. Can you figure out how to disable checking for this violation? What module (Checkstyle category) \_ and specific check \_must you ignore? Disable <module name="FinalParameters"/> in `sun_checks.xml`
 
 3. How did you change the code to remove the violation in step 13? Copy the improved line(s) of code here:
+
+```java
+public boolean getYesNoAnswer() {
+ for (int i = 0; i < 3; i++) {
+  String answer = getAnswer();
+  if (answer == null) {
+   return false;
+  }
+  char ans = answer.toUpperCase().charAt(0);
+  if (ans == 'Y') {
+   return true;
+  }
+  setPrompt(getPrompt() + ". Please answer Y or N: ");
+ }
+ return false;
+}
+```
 
 4. There is one occurrence of an inline conditional.
 
