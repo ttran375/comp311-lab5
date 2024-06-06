@@ -69,21 +69,6 @@
 
 2. What is the most common type of violation still reported by Checkstyle?
 
-    - **FinalParameters**: 41
-    - **LineLength**: 18
-    - **RegexpSingleline**: 13
-    - **FileTabCharacter**: 12
-    - **ParenPad**: 12
-    - **checkstyle] linter**: 11
-    - **WhitespaceAround**: 4
-    - **VisibilityModifier**: 4
-    - **MethodParamPad**: 3
-    - **MultipleVariableDeclarations**: 2
-    - **NewlineAtEndOfFile**: 2
-    - **NeedBraces**: 2
-    - **RedundantModifier**: 1
-    - **MagicNumber**: 1
-
     1. There are  `41` occurrences of `FinalParameters`
 
     2. Can you figure out how to disable checking for this violation? What module (Checkstyle category) \_ and specific check \_must you ignore? Disable <module name="FinalParameters"/> in `sun_checks.xml`
