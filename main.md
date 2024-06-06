@@ -121,7 +121,7 @@ public boolean getYesNoAnswer() {
     }
     ```
 
-    2. Why is using the inline operator considered poor form? (Give and explanation or name the ISO 9126 quality characteristic it offends) Using the inline operator (ternary operator) is considered poor form in some cases because it can reduce code readability, which offends the ISO 9126 quality characteristic of **maintainability**. The maintainability characteristic emphasizes that code should be easily understandable and modifiable by other developers. 
+    2. Why is using the inline operator considered poor form? (Give and explanation or name the ISO 9126 quality characteristic it offends) Using the inline operator (ternary operator) is considered poor form in some cases because it can reduce code readability, which offends the ISO 9126 quality characteristic of **maintainability**. The maintainability characteristic emphasizes that code should be easily understandable and modifiable by other developers.
 
 5. In the Checkstyle violations view, double-click the Cyclomatic
     complexity violation, to see the list of occurrences of this
