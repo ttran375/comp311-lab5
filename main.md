@@ -5,9 +5,9 @@
     One occurs in class **UserPrompter** in method **getYesNoAnswer()**.
     Where does the other appear:
 
-    1. Class `Ticket` Method `Ticket`
+    a. Class `Ticket` Method `Ticket`
 
-    2. How would you improve the code in the method you just named? The error message indicates that the value 1000000 is considered a "magic number," meaning it's a hard-coded number without context, making the code harder to understand and maintain. To fix this, we can define a constant for this value
+    b. How would you improve the code in the method you just named? The error message indicates that the value 1000000 is considered a "magic number," meaning it's a hard-coded number without context, making the code harder to understand and maintain. To fix this, we can define a constant for this value
 
     ```java
     package com.cc.airline.ticketing;
@@ -69,9 +69,9 @@
 
 2. What is the most common type of violation still reported by Checkstyle?
 
-    1. There are  `41` occurrences of `FinalParameters`
+    a. There are  `41` occurrences of `FinalParameters`
 
-    2. Can you figure out how to disable checking for this violation? What module (Checkstyle category) \_ and specific check \_must you ignore? Disable <module name="FinalParameters"/> in `sun_checks.xml`
+    b. Can you figure out how to disable checking for this violation? What module (Checkstyle category) **[checkstyle] linter** and specific check `FinalParameters` must you ignore? Disable <module name="FinalParameters"/> in `sun_checks.xml`
 
 3. How did you change the code to remove the violation in step 13? Copy the improved line(s) of code here:
 
@@ -94,7 +94,7 @@ public boolean getYesNoAnswer() {
 
 4. There is one occurrence of an inline conditional.
 
-    1. What operator is an inline conditional? \_ Hint: give the operator symbols
+    a. What operator is an inline conditional? Ternary operator Hint: give the operator symbols
 
     ```java
     public String toString() {
@@ -106,14 +106,14 @@ public boolean getYesNoAnswer() {
     }
     ```
 
-    2. Why is using the inline operator considered poor form? (Give and explanation or name the ISO 9126 quality characteristic it offends) Using the inline operator (ternary operator) is considered poor form in some cases because it can reduce code readability, which offends the ISO 9126 quality characteristic of **maintainability**. The maintainability characteristic emphasizes that code should be easily understandable and modifiable by other developers.
+    b. Why is using the inline operator considered poor form? (Give and explanation or name the ISO 9126 quality characteristic it offends) Using the inline operator (ternary operator) is considered poor form in some cases because it can reduce code readability, which offends the ISO 9126 quality characteristic of **maintainability**. The maintainability characteristic emphasizes that code should be easily understandable and modifiable by other developers.
 
 5. In the Checkstyle violations view, double-click the Cyclomatic
     complexity violation, to see the list of occurrences of this
     problem. Where does it occur?
 
-    1. What is the class name  \_ and method name \_
+    a. What is the class name `Manifest` and method name `main()`
 
-    2. What is the cyclomatic number reported for this method? \_
+    b. What is the cyclomatic number reported for this method? `6`
 
-    3. Does the reported cyclomatic number agree with the complexity calculated using the technique given in class? Circle: Yes or No. If no, what number did you calculate by manually  \_
+    c. Does the reported cyclomatic number agree with the complexity calculated using the technique given in class? Circle: **Yes** or No. If no, what number did you calculate by manually  \_
