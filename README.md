@@ -1,5 +1,7 @@
 # COMP311 Static Code Analysis exercise
 
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/ttran375/comp311-lab5)
+
 1. In the Checkstyle violations view, double-click the two violations
     noted in **step 10** to find the two occurrences of this problem.
     One occurs in class **UserPrompter** in method **getYesNoAnswer()**.
